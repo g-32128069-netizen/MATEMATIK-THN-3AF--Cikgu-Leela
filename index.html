@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuiz Ulang Kaji Matematik Tahun 3 - Masa dan Waktu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Great+Vibes&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                        },
+                        amber: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        certTitle: ['Cinzel', 'serif'],
+                        cursive: ['Great Vibes', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #certificate-print-area, #certificate-print-area * {
+                visibility: visible;
+            }
+            #certificate-print-area {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .cert-border-outer {
+            border: 10px double #1e3a8a;
+        }
+
+        .cert-border-inner {
+            border: 2px solid #d97706;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans min-h-screen flex flex-col justify-between selection:bg-sky-200">
+
+    <header class="bg-gradient-to-r from-sky-700 via-blue-800 to-indigo-900 text-white shadow-lg no-print">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white/10 p-2.5 rounded-2xl backdrop-blur-md border border-white/20">
+                    <i class="fa-solid fa-clock text-amber-400 text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-extrabold tracking-tight">KSSR Matematik Tahun 3</h1>
+                    <p class="text-sky-200 text-xs md:text-sm font-medium">Modul Ulang Kaji Topik 5.0: Masa dan Waktu</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/15 text-xs md:text-sm">
+                <i class="fa-solid fa-user-tie text-amber-300"></i>
+                <span class="font-semibold text-sky-100">Disediakan Oleh: Cikgu Leela</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto w-full px-4 py-6 flex-grow">
+
+        <section id="screen-start" class="block space-y-6">
+            <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-slate-200/80">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-sky-100 text-sky-800 border border-sky-200">
+                        <i class="fa-solid fa-star mr-1.5 text-amber-500"></i> Kuiz Interaktif 20 Soalan Objektif
+                    </span>
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        Ujian Ulang Kaji Masa & Waktu
+                    </h2>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                        Uji kefahaman anda mengikut Standard Pembelajaran DSKP Matematik Tahun 3 merangkumi jadual waktu, rekod masa, perkaitan unit, kalendar Masihi, dan operasi masa.
+                    </p>
+                </div>
+
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <div class="p-4 rounded-2xl bg-sky-50/70 border border-sky-100 flex items-start space-x-3">
+                        <i class="fa-solid fa-calendar-days text-sky-600 text-lg mt-0.5"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">5.1 Waktu Dalam Jam & Minit</h4>
+                            <p class="text-xs text-slate-500">Membaca jadual aktiviti & merekod waktu sebelum/semasa/selepas.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-indigo-50/70 border border-indigo-100 flex items-start space-x-3">
+                        <i class="fa-solid fa-arrow-right-arrow-left text-indigo-600 text-lg mt-0.5"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">5.2 Perkaitan Dalam Masa</h4>
+                            <p class="text-xs text-slate-500">Minggu-hari, tahun-bulan, minit-saat & penukaran unit jam/minit/saat.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-100 flex items-start space-x-3">
+                        <i class="fa-solid fa-calendar-check text-amber-600 text-lg mt-0.5"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">5.3 Kalendar Masihi</h4>
+                            <p class="text-xs text-slate-500">Mendapatkan maklumat kalendar, bilangan hari, dan masalah masa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="form-start" class="mt-8 space-y-5 max-w-md mx-auto" onsubmit="event.preventDefault(); startQuiz();">
+                    <div>
+                        <label for="student-name" class="block text-sm font-bold text-slate-700 mb-1.5">
+                            Nama Penuh Murid <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                            <input type="text" id="student-name" required placeholder="Contoh: Adam Haris Bin Ahmad" 
+                                class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition text-slate-800 text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="student-class" class="block text-sm font-bold text-slate-700 mb-1.5">
+                            Nama Kelas / Sekolah
+                        </label>
+                        <div class="relative">
+                            <i class="fa-solid fa-school absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                            <input type="text" id="student-class" placeholder="Contoh: 3 Cemerlang - SK Seri Bestari" 
+                                class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition text-slate-800 text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 px-6 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white font-bold rounded-2xl shadow-lg shadow-sky-500/25 transition transform active:scale-[0.99] flex items-center justify-center space-x-2 text-base">
+                        <span>Mula Jawab Kuiz Sekarang</span>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="screen-quiz" class="hidden space-y-6">
+            <!-- Top Progress & Timer Bar -->
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center space-x-3">
+                    <span id="quiz-progress-text" class="px-3 py-1 bg-sky-100 text-sky-800 rounded-lg text-xs font-bold">
+                        Soalan 1 daripada 20
+                    </span>
+                    <span id="student-display-tag" class="text-xs font-semibold text-slate-500 truncate max-w-[150px] md:max-w-xs"></span>
+                </div>
+                <div class="flex items-center space-x-2 text-xs font-bold text-slate-600 bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-lg">
+                    <i class="fa-solid fa-stopwatch text-amber-500"></i>
+                    <span id="quiz-timer">Masa: 00:00</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar Fill -->
+            <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
+                <div id="progress-bar-fill" class="bg-sky-600 h-2.5 rounded-full transition-all duration-300" style="width: 5%"></div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-slate-200/80 space-y-6">
+                <!-- Question Header -->
+                <div class="space-y-2">
+                    <div id="question-category" class="inline-block text-xs font-bold text-sky-600 uppercase tracking-wider bg-sky-50 px-2.5 py-1 rounded-md border border-sky-100">
+                        STANDARD PEMBELAJARAN
+                    </div>
+                    <h3 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-snug">
+                        <!-- Dynamic Question Text -->
+                    </h3>
+                </div>
+
+                <!-- Options A, B, C, D Grid -->
+                <div id="options-container" class="grid grid-cols-1 gap-3">
+                    <!-- Dynamic Options -->
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                    <button id="btn-prev" onclick="prevQuestion()" class="px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 font-bold hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center space-x-2 text-sm">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <span>Sebelumnya</span>
+                    </button>
+
+                    <div class="flex items-center space-x-2">
+                        <button id="btn-next" onclick="nextQuestion()" class="px-6 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold transition flex items-center space-x-2 text-sm shadow-md shadow-sky-500/20">
+                            <span>Seterusnya</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <button id="btn-submit-quiz" onclick="confirmSubmitQuiz()" class="hidden px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition items-center space-x-2 text-sm shadow-md shadow-emerald-500/20">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Hantar Kuiz</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 space-y-2">
+                <div class="flex justify-between items-center text-xs text-slate-500 font-semibold mb-2">
+                    <span>Petunjuk Soalan:</span>
+                    <div class="flex items-center space-x-3">
+                        <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-sky-600 inline-block mr-1"></span> Dijawab</span>
+                        <span class="flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-slate-200 inline-block mr-1"></span> Belum</span>
+                    </div>
+                </div>
+                <div id="question-palette" class="grid grid-cols-5 sm:grid-cols-10 gap-2">
+                    <!-- Dynamic Question Buttons -->
+                </div>
+            </div>
+        </section>
+
+        <section id="screen-result" class="hidden space-y-6">
+            <!-- Score Summary Dashboard -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-slate-200 text-center space-y-6">
+                <div class="w-20 h-20 mx-auto rounded-full bg-amber-100 border-4 border-amber-300 flex items-center justify-center shadow-inner">
+                    <i id="badge-icon" class="fa-solid fa-award text-amber-600 text-4xl"></i>
+                </div>
+
+                <div class="space-y-1">
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Keputusan Kuiz Anda</h2>
+                    <p id="student-result-name" class="text-slate-600 font-semibold text-lg"></p>
+                </div>
+
+                <!-- Marks Metrics Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-xl mx-auto">
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <p class="text-xs font-bold text-slate-500 uppercase">Jumlah Markah</p>
+                        <p id="score-fraction" class="text-2xl font-black text-slate-800 mt-1">0 / 20</p>
+                    </div>
+                    <div class="p-4 bg-sky-50 rounded-2xl border border-sky-100">
+                        <p class="text-xs font-bold text-sky-600 uppercase">Peratusan</p>
+                        <p id="score-percentage" class="text-2xl font-black text-sky-700 mt-1">0%</p>
+                    </div>
+                    <div class="p-4 bg-amber-50 rounded-2xl border border-amber-100">
+                        <p class="text-xs font-bold text-amber-600 uppercase">Gred Pencapaian</p>
+                        <p id="score-grade" class="text-2xl font-black text-amber-700 mt-1">-</p>
+                    </div>
+                    <div class="p-4 bg-indigo-50 rounded-2xl border border-indigo-100">
+                        <p class="text-xs font-bold text-indigo-600 uppercase">Masa Diambil</p>
+                        <p id="score-time" class="text-2xl font-black text-indigo-700 mt-1">00:00</p>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 pt-2">
+                    <button onclick="openCertificateModal()" class="px-6 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold rounded-xl shadow-lg shadow-amber-500/25 transition transform active:scale-95 flex items-center space-x-2 text-sm">
+                        <i class="fa-solid fa-certificate text-lg"></i>
+                        <span>Buka & Cetak Sijil Penghargaan</span>
+                    </button>
+
+                    <button onclick="restartQuiz()" class="px-6 py-3.5 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-xl transition transform active:scale-95 flex items-center space-x-2 text-sm">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Cuba Lagi</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Solutions Accordion Container -->
+            <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-slate-200/80 space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center space-x-2">
+                        <i class="fa-solid fa-list-check text-sky-600"></i>
+                        <span>Semakan & Langkah Pengiraan Soalan</span>
+                    </h3>
+                    <span class="text-xs text-slate-500 font-semibold">20 Soalan</span>
+                </div>
+
+                <div id="review-list-container" class="space-y-4">
+                    <!-- Dynamic review items -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="cert-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-2 sm:p-4 overflow-y-auto no-print">
+        <div class="bg-white rounded-2xl max-w-4xl w-full p-4 sm:p-6 shadow-2xl relative my-8">
+            <!-- Modal Header Actions -->
+            <div class="flex justify-between items-center mb-4 no-print pb-2 border-b border-slate-200">
+                <h3 class="font-bold text-slate-800 text-base sm:text-lg flex items-center space-x-2">
+                    <i class="fa-solid fa-award text-amber-500"></i>
+                    <span>Pratonton Sijil Penghargaan</span>
+                </h3>
+                <div class="flex items-center space-x-2">
+                    <button onclick="window.print()" class="px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-lg text-xs sm:text-sm flex items-center space-x-1.5 transition">
+                        <i class="fa-solid fa-print"></i>
+                        <span>Cetak / Simpan PDF</span>
+                    </button>
+                    <button onclick="closeCertificateModal()" class="p-2 text-slate-400 hover:text-slate-600 text-xl font-bold rounded-lg">
+                        &times;
+                    </button>
+                </div>
+            </div>
+
+            <div id="certificate-print-area" class="bg-amber-50/30 p-4 sm:p-8 rounded-xl border-4 border-amber-600/30 relative text-slate-900 shadow-inner">
+                <div class="cert-border-outer p-3 sm:p-6 bg-white relative">
+                    <div class="cert-border-inner p-4 sm:p-8 text-center space-y-4 sm:space-y-6 relative overflow-hidden">
+                        
+                        <!-- Watermark Clock Icon -->
+                        <div class="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+                            <i class="fa-solid fa-clock text-[280px] text-blue-900"></i>
+                        </div>
+
+                        <!-- Certificate Header -->
+                        <div class="space-y-1">
+                            <div class="text-amber-600 text-xs font-black tracking-widest uppercase">KEMENTERIAN PENDIDIKAN MALAYSIA</div>
+                            <h1 class="font-certTitle text-2xl sm:text-4xl font-extrabold text-blue-900 tracking-wider uppercase">SIJIL PENGHARGAAN</h1>
+                            <p class="text-xs sm:text-sm font-semibold text-slate-500 tracking-wide">KUIZ ULANG KAJI MATEMATIK TAHUN 3 (MASA DAN WAKTU)</p>
+                        </div>
+
+                        <div class="w-24 h-1 bg-amber-500 mx-auto rounded-full"></div>
+
+                        <!-- Certificate Recipient Details -->
+                        <div class="space-y-3 sm:space-y-4 max-w-2xl mx-auto">
+                            <p class="text-xs sm:text-sm text-slate-600 italic">Dengan ini diperakui bahawa:</p>
+                            
+                            <p id="cert-student-name" class="text-xl sm:text-3xl font-extrabold text-blue-950 uppercase tracking-wide border-b-2 border-slate-300 pb-1 inline-block px-4">
+                                ADAM HARIS BIN AHMAD
+                            </p>
+                            
+                            <p id="cert-student-class" class="text-xs sm:text-sm font-semibold text-slate-600">
+                                3 CEMERLANG
+                            </p>
+
+                            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed pt-2">
+                                telah berjaya menyempurnakan <strong>Kuiz Ulang Kaji Matematik Tahun 3: Masa dan Waktu</strong> berpandukan DSKP KSSR Semakan dengan pencapaian seperti di bawah:
+                            </p>
+                        </div>
+
+                        <!-- Score Display Badge inside Certificate -->
+                        <div class="inline-flex items-center justify-center space-x-6 bg-slate-50 border border-slate-200 px-6 py-3 rounded-xl shadow-sm my-2">
+                            <div>
+                                <span class="block text-[10px] font-bold uppercase text-slate-400">Markah</span>
+                                <span id="cert-mark" class="text-lg sm:text-xl font-black text-blue-900">18 / 20</span>
+                            </div>
+                            <div class="h-8 w-px bg-slate-300"></div>
+                            <div>
+                                <span class="block text-[10px] font-bold uppercase text-slate-400">Peratusan</span>
+                                <span id="cert-percent" class="text-lg sm:text-xl font-black text-emerald-600">90%</span>
+                            </div>
+                            <div class="h-8 w-px bg-slate-300"></div>
+                            <div>
+                                <span class="block text-[10px] font-bold uppercase text-slate-400">Pencapaian</span>
+                                <span id="cert-grade" class="text-lg sm:text-xl font-black text-amber-600">CEMERLANG</span>
+                            </div>
+                        </div>
+
+                        <!-- Date & Signature Section (Bottom Right: Disediakan Oleh: Cikgu Leela) -->
+                        <div class="pt-8 grid grid-cols-2 gap-4 text-left border-t border-slate-200 mt-6">
+                            <div class="space-y-1 self-end">
+                                <p class="text-[11px] text-slate-500">Tarikh Disempurnakan:</p>
+                                <p id="cert-date" class="text-xs font-bold text-slate-800">14 Oktober 2026</p>
+                            </div>
+                            
+                            <!-- Mandatory Requirement: Disediakan Oleh: Cikgu Leela in bottom right corner -->
+                            <div class="text-right space-y-1">
+                                <p class="font-cursive text-2xl text-blue-900">Leela</p>
+                                <div class="w-32 h-0.5 bg-slate-400 ml-auto"></div>
+                                <p class="text-xs font-extrabold text-slate-900 mt-1">Disediakan Oleh: Cikgu Leela</p>
+                                <p class="text-[10px] text-slate-500 font-medium">Guru Matematik Tahun 3</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500 no-print">
+        <p>© Modul Pengajaran & Pembelajaran Matematik KSSR Tahun 3 | Masa dan Waktu</p>
+    </footer>
+
+    <script>
+        // 20 OBJECTIVE QUESTIONS BASED ON DSKP TAHUN 3 MASA DAN WAKTU (5.1, 5.2, 5.3)
+        const quizQuestions = [
+            {
+                id: 1,
+                category: "5.2.1 Perkaitan Masa",
+                question: "1 minggu bersamaan dengan berapa hari?",
+                options: ["5 hari", "7 hari", "10 hari", "12 hari"],
+                answer: 1, // B: 7 hari
+                explanation: "1 minggu mengandungi 7 hari (Isnin, Selasa, Rabu, Khamis, Jumaat, Sabtu, Ahad)."
+            },
+            {
+                id: 2,
+                category: "5.2.1 Perkaitan Masa",
+                question: "1 tahun mengandungi berapa bulan?",
+                options: ["7 bulan", "10 bulan", "12 bulan", "24 bulan"],
+                answer: 2, // C: 12 bulan
+                explanation: "1 tahun mengandungi 12 bulan (Januari hingga Disember)."
+            },
+            {
+                id: 3,
+                category: "5.2.1 Perkaitan Masa",
+                question: "1 minit bersamaan dengan berapa saat?",
+                options: ["30 saat", "50 saat", "60 saat", "100 saat"],
+                answer: 2, // C: 60 saat
+                explanation: "1 minit = 60 saat."
+            },
+            {
+                id: 4,
+                category: "5.2.2 Menukar Unit Masa",
+                question: "Tukarkan 2 jam kepada unit minit.",
+                options: ["100 minit", "120 minit", "140 minit", "160 minit"],
+                answer: 1, // B: 120 minit
+                explanation: "1 jam = 60 minit. Oleh itu, 2 jam = 2 × 60 minit = 120 minit."
+            },
+            {
+                id: 5,
+                category: "5.2.2 Menukar Unit Masa",
+                question: "Tukarkan 180 saat kepada unit minit.",
+                options: ["2 minit", "3 minit", "4 minit", "5 minit"],
+                answer: 1, // B: 3 minit
+                explanation: "60 saat = 1 minit. Jadi, 180 ÷ 60 = 3 minit."
+            },
+            {
+                id: 6,
+                category: "5.2.2 Menukar Unit Masa",
+                question: "1 jam 15 minit bersamaan dengan berapa minit?",
+                options: ["65 minit", "75 minit", "85 minit", "95 minit"],
+                answer: 1, // B: 75 minit
+                explanation: "1 jam = 60 minit. Maka, 60 minit + 15 minit = 75 minit."
+            },
+            {
+                id: 7,
+                category: "5.2.2 Menukar Unit Masa",
+                question: "3 minit 20 saat dalam unit saat ialah:",
+                options: ["140 saat", "180 saat", "200 saat", "220 saat"],
+                answer: 2, // C: 200 saat
+                explanation: "3 minit = 3 × 60 = 180 saat. Jumlah saat = 180 + 20 = 200 saat."
+            },
+            {
+                id: 8,
+                category: "5.1.1 Jadual Waktu Aktiviti",
+                question: "Sebuah tayangan kartun bermula pada pukul 4:15 petang dan tamat pada pukul 4:45 petang. Berapakah tempoh masa tayangan itu?",
+                options: ["15 minit", "30 minit", "45 minit", "1 jam"],
+                answer: 1, // B: 30 minit
+                explanation: "Tempoh masa = 4:45 - 4:15 = 30 minit."
+            },
+            {
+                id: 9,
+                category: "5.1.2 Rekod Waktu Selepas Aktiviti",
+                question: "Aiman mula membaca buku pada pukul 8:00 malam. Dia membaca selama 1 jam 30 minit. Pukul berapakah dia selesai membaca?",
+                options: ["9:00 malam", "9:15 malam", "9:30 malam", "10:00 malam"],
+                answer: 2, // C: 9:30 malam
+                explanation: "Waktu mula (8:00 malam) + 1 jam 30 minit = 9:30 malam."
+            },
+            {
+                id: 10,
+                category: "5.3.1 Kalendar Masihi",
+                question: "Bulan manakah yang mempunyai 28 atau 29 hari sahaja?",
+                options: ["Januari", "Februari", "Mac", "April"],
+                answer: 1, // B: Februari
+                explanation: "Bulan Februari mempunyai 28 hari pada tahun biasa dan 29 hari pada tahun lompat."
+            },
+            {
+                id: 11,
+                category: "5.3.1 Kalendar Masihi",
+                question: "Berapakah bilangan hari dalam bulan Julai?",
+                options: ["28 hari", "29 hari", "30 hari", "31 hari"],
+                answer: 3, // D: 31 hari
+                explanation: "Bulan Julai mengandungi 31 hari."
+            },
+            {
+                id: 12,
+                category: "5.2.1 Perkaitan Minggu dan Hari",
+                question: "4 minggu 2 hari bersamaan dengan berapa hari?",
+                options: ["28 hari", "30 hari", "32 hari", "34 hari"],
+                answer: 1, // B: 30 hari
+                explanation: "4 minggu = 4 × 7 hari = 28 hari. 28 hari + 2 hari = 30 hari."
+            },
+            {
+                id: 13,
+                category: "5.2.1 Perkaitan Tahun dan Bulan",
+                question: "2 tahun 5 bulan bersamaan dengan berapa bulan?",
+                options: ["24 bulan", "27 bulan", "29 bulan", "31 bulan"],
+                answer: 2, // C: 29 bulan
+                explanation: "2 tahun = 2 × 12 = 24 bulan. 24 bulan + 5 bulan = 29 bulan."
+            },
+            {
+                id: 14,
+                category: "Penambahan Masa",
+                question: "2 jam 25 minit + 3 jam 15 minit =",
+                options: ["5 jam 30 minit", "5 jam 40 minit", "6 jam 10 minit", "6 jam 40 minit"],
+                answer: 1, // B: 5 jam 40 minit
+                explanation: "Jam: 2 + 3 = 5 jam. Minit: 25 + 15 = 40 minit. Jawapan = 5 jam 40 minit."
+            },
+            {
+                id: 15,
+                category: "Penolakan Masa",
+                question: "7 minit 50 saat - 3 minit 20 saat =",
+                options: ["4 minit 10 saat", "4 minit 30 saat", "4 minit 40 saat", "5 minit 30 saat"],
+                answer: 1, // B: 4 minit 30 saat
+                explanation: "Minit: 7 - 3 = 4 minit. Saat: 50 - 20 = 30 saat. Jawapan = 4 minit 30 saat."
+            },
+            {
+                id: 16,
+                category: "Pendaraban Masa",
+                question: "4 × 2 jam 10 minit =",
+                options: ["8 jam 20 minit", "8 jam 30 minit", "8 jam 40 minit", "9 jam 10 minit"],
+                answer: 2, // C: 8 jam 40 minit
+                explanation: "4 × 2 jam = 8 jam. 4 × 10 minit = 40 minit. Jawapan = 8 jam 40 minit."
+            },
+            {
+                id: 17,
+                category: "Pembahagian Masa",
+                question: "15 jam ÷ 3 =",
+                options: ["3 jam", "4 jam", "5 jam", "6 jam"],
+                answer: 2, // C: 5 jam
+                explanation: "15 jam bahagi 3 = 5 jam."
+            },
+            {
+                id: 18,
+                category: "Penyelesaian Masalah Masa",
+                question: "Siti membuat kek dalam masa 1 jam 40 minit. Ibu membuat kuih dalam masa 50 minit. Berapakah jumlah masa yang diambil oleh Siti dan ibu?",
+                options: ["2 jam 10 minit", "2 jam 30 minit", "2 jam 50 minit", "3 jam 10 minit"],
+                answer: 1, // B: 2 jam 30 minit
+                explanation: "1 jam 40 minit + 50 minit = 1 jam 90 minit. Kerana 90 minit = 1 jam 30 minit, maka 1 jam + 1 jam 30 minit = 2 jam 30 minit."
+            },
+            {
+                id: 19,
+                category: "5.3.1 Kalendar Masihi",
+                question: "Jika 1 Mei jatuh pada hari Isnin, apakah hari bagi 8 Mei?",
+                options: ["Ahad", "Isnin", "Selasa", "Rabu"],
+                answer: 1, // B: Isnin
+                explanation: "Selang masa ialah 8 - 1 = 7 hari (iaitu genap 1 minggu). Maka 8 Mei jatuh pada hari yang sama iaitu Isnin."
+            },
+            {
+                id: 20,
+                category: "5.1.2 Rekod Waktu Sebelum Aktiviti",
+                question: "Satu aktiviti sukan tamat pada pukul 12:30 tengah hari selepas berlangsung selama 2 jam. Pukul berapakah aktiviti sukan itu bermula?",
+                options: ["10:00 pagi", "10:30 pagi", "11:00 pagi", "11:30 pagi"],
+                answer: 1, // B: 10:30 pagi
+                explanation: "12:30 tengah hari tolak 2 jam = 10:30 pagi."
+            }
+        ];
+
+        let studentName = "";
+        let studentClass = "";
+        let currentQuestionIndex = 0;
+        let userAnswers = new Array(quizQuestions.length).fill(null);
+        let timerSeconds = 0;
+        let timerInterval = null;
+
+        function startQuiz() {
+            const nameInput = document.getElementById('student-name').value.trim();
+            const classInput = document.getElementById('student-class').value.trim();
+
+            if (!nameInput) {
+                alert("Sila masukkan nama murid terlebih dahulu.");
+                return;
+            }
+
+            studentName = nameInput;
+            studentClass = classInput || "Tahun 3";
+
+            document.getElementById('student-display-tag').innerText = studentName;
+            
+            // Switch screen
+            document.getElementById('screen-start').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+
+            // Start timer
+            timerSeconds = 0;
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                timerSeconds++;
+                const mins = String(Math.floor(timerSeconds / 60)).padStart(2, '0');
+                const secs = String(timerSeconds % 60).padStart(2, '0');
+                document.getElementById('quiz-timer').innerText = `Masa: ${mins}:${secs}`;
+            }, 1000);
+
+            renderQuestionPalette();
+            loadQuestion(0);
+        }
+
+        function renderQuestionPalette() {
+            const paletteContainer = document.getElementById('question-palette');
+            paletteContainer.innerHTML = '';
+
+            quizQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.id = `palette-btn-${idx}`;
+                btn.className = `w-full py-2 text-xs font-bold rounded-lg border transition ${
+                    userAnswers[idx] !== null 
+                        ? 'bg-sky-600 text-white border-sky-600' 
+                        : 'bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200'
+                }`;
+                btn.innerText = idx + 1;
+                btn.onclick = () => loadQuestion(idx);
+                paletteContainer.appendChild(btn);
+            });
+        }
+
+        function loadQuestion(index) {
+            currentQuestionIndex = index;
+            const q = quizQuestions[index];
+
+            // Header & Progress
+            document.getElementById('quiz-progress-text').innerText = `Soalan ${index + 1} daripada ${quizQuestions.length}`;
+            document.getElementById('question-category').innerText = q.category;
+            document.getElementById('question-text').innerText = `${index + 1}. ${q.question}`;
+
+            const percent = ((index + 1) / quizQuestions.length) * 100;
+            document.getElementById('progress-bar-fill').style.width = `${percent}%`;
+
+            // Render Options
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            const optionLabels = ['A', 'B', 'C', 'D'];
+
+            q.options.forEach((opt, optIdx) => {
+                const isSelected = userAnswers[index] === optIdx;
+                const optionBtn = document.createElement('button');
+                optionBtn.type = 'button';
+                optionBtn.onclick = () => selectOption(optIdx);
+                optionBtn.className = `w-full p-4 text-left rounded-2xl border-2 transition flex items-center space-x-3 ${
+                    isSelected 
+                        ? 'border-sky-600 bg-sky-50/80 text-sky-950 font-bold shadow-sm' 
+                        : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 text-slate-800'
+                }`;
+
+                optionBtn.innerHTML = `
+                    <span class="w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs ${
+                        isSelected ? 'bg-sky-600 text-white' : 'bg-slate-100 text-slate-600'
+                    }">${optionLabels[optIdx]}</span>
+                    <span class="text-sm md:text-base font-semibold">${opt}</span>
+                `;
+                container.appendChild(optionBtn);
+            });
+
+            // Prev/Next Navigation
+            document.getElementById('btn-prev').disabled = (index === 0);
+
+            if (index === quizQuestions.length - 1) {
+                document.getElementById('btn-next').classList.add('hidden');
+                document.getElementById('btn-submit-quiz').classList.remove('hidden');
+                document.getElementById('btn-submit-quiz').classList.add('flex');
+            } else {
+                document.getElementById('btn-next').classList.remove('hidden');
+                document.getElementById('btn-submit-quiz').classList.add('hidden');
+                document.getElementById('btn-submit-quiz').classList.remove('flex');
+            }
+
+            // Highlight active button in palette
+            quizQuestions.forEach((_, idx) => {
+                const pBtn = document.getElementById(`palette-btn-${idx}`);
+                if (pBtn) {
+                    if (idx === index) {
+                        pBtn.classList.add('ring-2', 'ring-amber-500', 'ring-offset-1');
+                    } else {
+                        pBtn.classList.remove('ring-2', 'ring-amber-500', 'ring-offset-1');
+                    }
+                }
+            });
+        }
+
+        function selectOption(optIndex) {
+            userAnswers[currentQuestionIndex] = optIndex;
+            
+            const pBtn = document.getElementById(`palette-btn-${currentQuestionIndex}`);
+            if (pBtn) {
+                pBtn.className = `w-full py-2 text-xs font-bold rounded-lg border transition bg-sky-600 text-white border-sky-600 ring-2 ring-amber-500 ring-offset-1`;
+            }
+
+            loadQuestion(currentQuestionIndex);
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                loadQuestion(currentQuestionIndex - 1);
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < quizQuestions.length - 1) {
+                loadQuestion(currentQuestionIndex + 1);
+            }
+        }
+
+        function confirmSubmitQuiz() {
+            const unansweredCount = userAnswers.filter(a => a === null).length;
+            let msg = "Adakah anda pasti untuk menghantar jawapan kuiz sekarang?";
+            if (unansweredCount > 0) {
+                msg = `Terdapat ${unansweredCount} soalan yang belum dijawab. Adakah anda pasti mahu menghantar?`;
+            }
+
+            if (window.confirm(msg)) {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            clearInterval(timerInterval);
+
+            // Calculate Marks
+            let correctCount = 0;
+            quizQuestions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.answer) {
+                    correctCount++;
+                }
+            });
+
+            const total = quizQuestions.length;
+            const percentage = Math.round((correctCount / total) * 100);
+
+            let grade = "BAIK";
+            let badgeIconClass = "fa-award text-amber-600";
+            if (percentage >= 80) {
+                grade = "CEMERLANG";
+                badgeIconClass = "fa-crown text-amber-500";
+            } else if (percentage >= 60) {
+                grade = "SANGAT BAIK";
+                badgeIconClass = "fa-medal text-blue-600";
+            }
+
+            const mins = String(Math.floor(timerSeconds / 60)).padStart(2, '0');
+            const secs = String(timerSeconds % 60).padStart(2, '0');
+            const formattedTime = `${mins}:${secs}`;
+
+            // Populate Results Screen
+            document.getElementById('student-result-name').innerText = `${studentName} (${studentClass})`;
+            document.getElementById('score-fraction').innerText = `${correctCount} / ${total}`;
+            document.getElementById('score-percentage').innerText = `${percentage}%`;
+            document.getElementById('score-grade').innerText = grade;
+            document.getElementById('score-time').innerText = formattedTime;
+            document.getElementById('badge-icon').className = `fa-solid ${badgeIconClass} text-4xl`;
+
+            // Populate Certificate
+            document.getElementById('cert-student-name').innerText = studentName;
+            document.getElementById('cert-student-class').innerText = studentClass.toUpperCase();
+            document.getElementById('cert-mark').innerText = `${correctCount} / ${total}`;
+            document.getElementById('cert-percent').innerText = `${percentage}%`;
+            document.getElementById('cert-grade').innerText = grade;
+
+            const today = new Date();
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('cert-date').innerText = today.toLocaleDateString('ms-MY', dateOptions);
+
+            renderReviewCards();
+
+            // Display Results
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderReviewCards() {
+            const container = document.getElementById('review-list-container');
+            container.innerHTML = '';
+
+            const optionLabels = ['A', 'B', 'C', 'D'];
+
+            quizQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const isCorrect = userAns === q.answer;
+
+                const card = document.createElement('div');
+                card.className = `p-4 md:p-5 rounded-2xl border ${
+                    isCorrect ? 'bg-emerald-50/40 border-emerald-200' : 'bg-rose-50/40 border-rose-200'
+                } space-y-3`;
+
+                const userAnsText = userAns !== null ? `${optionLabels[userAns]}. ${q.options[userAns]}` : "Tidak dijawab";
+                const correctAnsText = `${optionLabels[q.answer]}. ${q.options[q.answer]}`;
+
+                card.innerHTML = `
+                    <div class="flex items-start justify-between gap-2">
+                        <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-extrabold uppercase tracking-wide ${
+                            isCorrect ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
+                        }">
+                            Soalan ${idx + 1} • ${isCorrect ? 'Betul' : 'Salah'}
+                        </span>
+                        <span class="text-xs text-slate-500 font-semibold">${q.category}</span>
+                    </div>
+
+                    <h4 class="font-bold text-slate-900 text-sm md:text-base">${q.question}</h4>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs sm:text-sm font-semibold">
+                        <div class="p-2.5 rounded-xl ${isCorrect ? 'bg-emerald-100/60 text-emerald-900' : 'bg-rose-100/60 text-rose-900'}">
+                            <span>Jawapan Anda: </span>
+                            <strong>${userAnsText}</strong>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-sky-100/60 text-sky-900">
+                            <span>Jawapan Tepat: </span>
+                            <strong>${correctAnsText}</strong>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-white/80 rounded-xl border border-slate-200/80 text-xs text-slate-600 leading-relaxed">
+                        <strong class="text-slate-800 flex items-center mb-1">
+                            <i class="fa-solid fa-lightbulb text-amber-500 mr-1.5"></i> Cara Pengiraan / Penerangan:
+                        </strong>
+                        ${q.explanation}
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function openCertificateModal() {
+            document.getElementById('cert-modal').classList.remove('hidden');
+        }
+
+        function closeCertificateModal() {
+            document.getElementById('cert-modal').classList.add('hidden');
+        }
+
+        function restartQuiz() {
+            userAnswers = new Array(quizQuestions.length).fill(null);
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-start').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
